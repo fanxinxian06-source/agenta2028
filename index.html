@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGENTA 2028 · 深度整合 Agentic AI 的前沿技术展示站</title>
+  <meta name="description" content="AGENTA 2028 — 面向 CES 2028 的三语前沿技术展示站：Agentic AI 核心机制、开源 Agent 生态与多智能体协作。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">跳到主要内容</a>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#hero" aria-label="AGENTA 2028">
+        <svg class="brand-mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+          <defs>
+            <linearGradient id="brandGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#22d3ee"/>
+              <stop offset="1" stop-color="#8b5cf6"/>
+            </linearGradient>
+          </defs>
+          <rect x="2" y="2" width="28" height="28" rx="8" fill="none" stroke="url(#brandGrad)" stroke-width="2"/>
+          <circle cx="16" cy="16" r="5" fill="url(#brandGrad)"/>
+          <circle cx="16" cy="16" r="9.5" fill="none" stroke="url(#brandGrad)" stroke-width="1" opacity="0.5"/>
+        </svg>
+        <span class="brand-name">AGENTA&nbsp;2028</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main">
+        <a href="#evolution" data-i18n="nav.evolution">技术演进</a>
+        <a href="#loop" data-i18n="nav.loop">核心机制</a>
+        <a href="#ecosystem" data-i18n="nav.ecosystem">开源生态</a>
+        <a href="#demo" data-i18n="nav.demo">演示</a>
+        <a href="#data" data-i18n="nav.data">数据</a>
+        <a href="#arch" data-i18n="nav.arch">架构</a>
+        <a href="#roadmap" data-i18n="nav.roadmap">路线图</a>
+      </nav>
+
+      <div class="nav-tools">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-lang-btn="zh" class="lang-btn is-active" aria-pressed="true">中文</button>
+          <button type="button" data-lang-btn="en" class="lang-btn" aria-pressed="false">English</button>
+          <button type="button" data-lang-btn="ko" class="lang-btn" aria-pressed="false">한국어</button>
+        </div>
+        <button class="nav-burger" id="navBurger" aria-expanded="false" aria-controls="navLinks" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <canvas class="nebula" id="nebula" aria-hidden="true"></canvas>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="hero-badge reveal"><span class="badge-dot" aria-hidden="true"></span><span data-i18n="hero.badge">CES 2028 全球发布 · 五大创新奖目标</span></p>
+        <h1 class="hero-title reveal">AGENTA&nbsp;2028</h1>
+        <p class="hero-headline reveal" data-i18n="hero.headline">深度整合 Agentic AI 与开源 Agent 基础设施</p>
+        <p class="hero-sub reveal" data-i18n="hero.sub">一个面向下一个智能时代的三语技术展示站：以可交互的方式呈现智能体从感知到协作的完整图景。</p>
+        <div class="hero-cta reveal">
+          <a class="btn btn-primary" href="#evolution" data-i18n="hero.cta1">开始探索</a>
+          <a class="btn btn-ghost" href="#demo" data-i18n="hero.cta2">观看演示</a>
+        </div>
+        <ul class="hero-stats reveal">
+          <li><strong>3</strong><span data-i18n="hero.stat1">三语内容</span></li>
+          <li><strong>6+</strong><span data-i18n="hero.stat2">开源框架生态</span></li>
+          <li><strong>4</strong><span data-i18n="hero.stat3">智能体演进阶段</span></li>
+          <li><strong>5</strong><span data-i18n="hero.stat4">创新奖目标</span></li>
+        </ul>
+      </div>
+      <a class="hero-scroll" href="#evolution" aria-hidden="true" tabindex="-1">
+        <span data-i18n="hero.scroll">向下滚动</span><span class="hero-scroll-line"></span>
+      </a>
+    </section>
+
+    <!-- ============ EVOLUTION ============ -->
+    <section class="section" id="evolution">
+      <div class="section-head reveal">
+        <p class="kicker"><span>01</span><span data-i18n="evolution.kicker">技术演进</span></p>
+        <h2 data-i18n="evolution.title">智能体从哪里来</h2>
+        <p class="section-intro" data-i18n="evolution.intro">四条线索勾勒出智能体技术二十年的演进轨迹——从固定规则到自主协作。</p>
+      </div>
+      <ol class="timeline" id="timeline"></ol>
+    </section>
+
+    <!-- ============ AGENT LOOP ============ -->
+    <section class="section" id="loop">
+      <div class="section-head reveal">
+        <p class="kicker"><span>02</span><span data-i18n="loop.kicker">核心机制</span></p>
+        <h2 data-i18n="loop.title">Agentic AI 核心机制</h2>
+        <p class="section-intro" data-i18n="loop.intro">现代智能体的本质是一个持续运转的反馈循环——四个环节相互咬合，让智能体得以自主地理解、决策并行动。</p>
+      </div>
+      <div class="loop-layout">
+        <div class="loop-stage reveal" id="loopStage">
+          <button class="loop-node" data-node="perceive" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12z"/><circle cx="12" cy="12" r="2.6"/></svg>
+            <span class="loop-node-label" data-i18n="loop.perceive.label">感知</span>
+          </button>
+          <button class="loop-node" data-node="plan" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16M4 12h16M4 19h10"/><path d="M17 16l3 3-3 3"/></svg>
+            <span class="loop-node-label" data-i18n="loop.plan.label">规划</span>
+          </button>
+          <button class="loop-node" data-node="act" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+            <span class="loop-node-label" data-i18n="loop.act.label">行动</span>
+          </button>
+          <button class="loop-node" data-node="memory" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="7.5" ry="3"/><path d="M4.5 5.5v13c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3v-13"/><path d="M4.5 12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3"/></svg>
+            <span class="loop-node-label" data-i18n="loop.memory.label">记忆</span>
+          </button>
+          <div class="loop-hub" aria-hidden="true">
+            <div class="loop-hub-ring"></div>
+            <span class="loop-hub-core" data-i18n="loop.center">自主循环</span>
+          </div>
+          <aside class="loop-detail" aria-live="polite">
+            <h3 class="loop-detail-title" id="loopDetailTitle"></h3>
+            <p class="loop-detail-desc" id="loopDetailDesc"></p>
+            <p class="loop-detail-hint" data-i18n="loop.hint">悬停或点击左侧环节查看说明</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ECOSYSTEM ============ -->
+    <section class="section" id="ecosystem">
+      <div class="section-head reveal">
+        <p class="kicker"><span>03</span><span data-i18n="ecosystem.kicker">开源生态</span></p>
+        <h2 data-i18n="ecosystem.title">开源 Agent 生态（Open Harness）</h2>
+        <p class="section-intro" data-i18n="ecosystem.intro">从「框架」到「harness」：新一代开源项目不再只是拼装零件，而是提供开箱即用的智能体运行环境——沙箱、记忆、编排一应俱全。</p>
+      </div>
+      <figure class="callout reveal">
+        <blockquote lang="en">Agent = Model + Harness</blockquote>
+        <figcaption data-i18n="ecosystem.callout">—— DeerFlow 2.0 提出的核心公式</figcaption>
+      </figure>
+      <div class="cards" id="ecoCards"></div>
+    </section>
+
+    <!-- ============ DEMO ============ -->
+    <section class="section" id="demo">
+      <div class="section-head reveal">
+        <p class="kicker"><span>04</span><span data-i18n="demo.kicker">交互演示</span></p>
+        <h2 data-i18n="demo.title">看一个智能体如何工作</h2>
+        <p class="section-intro" data-i18n="demo.intro">选择一个任务，观看智能体如何思考、调用工具并完成任务。</p>
+      </div>
+      <div class="demo-layout reveal">
+        <div class="demo-tasks" id="demoTasks" role="tablist" aria-label="Demo tasks"></div>
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span class="dot dot-r" aria-hidden="true"></span>
+            <span class="dot dot-y" aria-hidden="true"></span>
+            <span class="dot dot-g" aria-hidden="true"></span>
+            <span class="terminal-title" data-i18n="demo.terminal">agent-shell</span>
+            <span class="terminal-badge" data-i18n="demo.badge">模拟演示 · SIMULATED</span>
+          </div>
+          <div class="terminal-body" id="terminalOutput">
+            <p class="term-empty" data-i18n="demo.empty">选择左侧任务并点击「运行」，观察智能体的执行过程。</p>
+          </div>
+          <div class="terminal-foot">
+            <button class="btn btn-primary btn-sm" id="demoRun" type="button" data-i18n="demo.run">运行</button>
+            <button class="btn btn-ghost btn-sm" id="demoReset" type="button" data-i18n="demo.reset">清空</button>
+          </div>
+        </div>
+      </div>
+      <p class="sr-only" id="demoStatus" aria-live="polite"></p>
+      <p class="section-note reveal" data-i18n="demo.footnote">* 本演示为前端模拟，不调用任何真实模型或网络服务。</p>
+    </section>
+
+    <!-- ============ DATA ============ -->
+    <section class="section" id="data">
+      <div class="section-head reveal">
+        <p class="kicker"><span>05</span><span data-i18n="data.kicker">数据洞察</span></p>
+        <h2 data-i18n="data.title">协作的力量</h2>
+        <p class="section-intro" data-i18n="data.intro">当智能体组成团队，任务表现会如何变化？下方为示意图表。</p>
+      </div>
+      <div class="viz-card reveal">
+        <div class="viz-root">
+          <h3 class="viz-title" data-i18n="data.chartTitle">任务完成率对比：单智能体 vs 多智能体（示意数据）</h3>
+          <div class="viz-legend" id="vizLegend" aria-hidden="true"></div>
+          <div class="viz-plot" id="vizPlot"></div>
+          <p class="viz-note" data-i18n="data.note">示意图表：数值仅用于说明趋势，不代表任何基准测试结果。</p>
+          <details class="viz-table">
+            <summary data-i18n="data.tableToggle">查看数据表</summary>
+            <table>
+              <caption class="sr-only" data-i18n="data.tableCaption">任务完成率对比数据表</caption>
+              <thead>
+                <tr>
+                  <th scope="col" data-i18n="data.tableH1">任务类别</th>
+                  <th scope="col" data-i18n="data.tableH2">单智能体</th>
+                  <th scope="col" data-i18n="data.tableH3">多智能体协作</th>
+                </tr>
+              </thead>
+              <tbody id="vizTableBody"></tbody>
+            </table>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ARCHITECTURE ============ -->
+    <section class="section" id="arch">
+      <div class="section-head reveal">
+        <p class="kicker"><span>06</span><span data-i18n="arch.kicker">技术架构</span></p>
+        <h2 data-i18n="arch.title">生产级智能体栈的分层</h2>
+        <p class="section-intro" data-i18n="arch.intro">从用户意图到沙箱执行，一个生产级智能体栈的完整分层。</p>
+      </div>
+      <div class="arch-wrap reveal">
+        <svg class="arch" viewBox="0 0 760 420" role="img" aria-labelledby="archTitle archDesc">
+          <title id="archTitle" data-i18n="arch.svgTitle">技术架构分层图</title>
+          <desc id="archDesc" data-i18n="arch.svgDesc">用户经由编排层连接工具、模型、记忆与沙箱环境。</desc>
+          <defs>
+            <linearGradient id="archAccent" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#22d3ee"/>
+              <stop offset="1" stop-color="#8b5cf6"/>
+            </linearGradient>
+          </defs>
+          <!-- user -->
+          <g class="arch-box">
+            <rect x="300" y="18" width="160" height="52" rx="12"/>
+            <text x="380" y="49" text-anchor="middle" data-i18n="arch.user">用户</text>
+          </g>
+          <line class="arch-line" x1="380" y1="70" x2="380" y2="108"/>
+          <!-- orchestrator -->
+          <g class="arch-box arch-box-accent">
+            <rect x="200" y="108" width="360" height="64" rx="14"/>
+            <text class="arch-t" x="380" y="136" text-anchor="middle" data-i18n="arch.orchestrator">编排层 Orchestrator</text>
+            <text class="arch-s" x="380" y="158" text-anchor="middle" data-i18n="arch.orchestratorSub">调度 · 状态 · 多智能体</text>
+          </g>
+          <line class="arch-line" x1="290" y1="172" x2="210" y2="222"/>
+          <line class="arch-line" x1="380" y1="172" x2="380" y2="222"/>
+          <line class="arch-line" x1="470" y1="172" x2="550" y2="222"/>
+          <line class="arch-line" x1="300" y1="172" x2="150" y2="222"/>
+          <!-- tools -->
+          <g class="arch-box">
+            <rect x="90" y="222" width="120" height="52" rx="12"/>
+            <text x="150" y="253" text-anchor="middle" data-i18n="arch.tools">工具 Tools</text>
+          </g>
+          <!-- models -->
+          <g class="arch-box">
+            <rect x="320" y="222" width="120" height="52" rx="12"/>
+            <text x="380" y="253" text-anchor="middle" data-i18n="arch.models">模型 Models</text>
+          </g>
+          <!-- memory -->
+          <g class="arch-box">
+            <rect x="550" y="222" width="120" height="52" rx="12"/>
+            <text x="610" y="253" text-anchor="middle" data-i18n="arch.memory">记忆 Memory</text>
+          </g>
+          <!-- sandbox -->
+          <g class="arch-box arch-box-accent">
+            <rect x="210" y="316" width="340" height="64" rx="14"/>
+            <text class="arch-t" x="380" y="344" text-anchor="middle" data-i18n="arch.sandbox">沙箱环境 Sandbox</text>
+            <text class="arch-s" x="380" y="366" text-anchor="middle" data-i18n="arch.sandboxSub">本地 · Docker · K8s</text>
+          </g>
+          <line class="arch-line" x1="210" y1="274" x2="280" y2="316"/>
+          <line class="arch-line" x1="380" y1="274" x2="380" y2="316"/>
+          <line class="arch-line" x1="550" y1="274" x2="480" y2="316"/>
+        </svg>
+        <p class="section-note" data-i18n="arch.caption">* 参考开源 harness（DeerFlow、OpenHands 等）的通用分层。</p>
+      </div>
+    </section>
+
+    <!-- ============ ROADMAP ============ -->
+    <section class="section" id="roadmap">
+      <div class="section-head reveal">
+        <p class="kicker"><span>07</span><span data-i18n="roadmap.kicker">发布路线</span></p>
+        <h2 data-i18n="roadmap.title">CES 2028 路线图</h2>
+        <p class="section-intro" data-i18n="roadmap.intro">以目标为导向的发布节奏，直至拉斯维加斯的聚光灯。</p>
+      </div>
+      <ol class="roadmap">
+        <li class="roadmap-item reveal">
+          <div class="roadmap-dot" aria-hidden="true"></div>
+          <p class="roadmap-date">2026&nbsp;Q4</p>
+          <h3 data-i18n="roadmap.m1.title">原型验证</h3>
+          <p data-i18n="roadmap.m1.desc">完成智能体循环原型与三语内容框架。</p>
+        </li>
+        <li class="roadmap-item reveal">
+          <div class="roadmap-dot" aria-hidden="true"></div>
+          <p class="roadmap-date">2027&nbsp;Q2</p>
+          <h3 data-i18n="roadmap.m2.title">开放测试</h3>
+          <p data-i18n="roadmap.m2.desc">邀请开发者试用，打磨演示与文档。</p>
+        </li>
+        <li class="roadmap-item reveal">
+          <div class="roadmap-dot" aria-hidden="true"></div>
+          <p class="roadmap-date">2027&nbsp;Q4</p>
+          <h3 data-i18n="roadmap.m3.title">发布候选</h3>
+          <p data-i18n="roadmap.m3.desc">冻结特性，完成多语言与可访问性审计。</p>
+        </li>
+        <li class="roadmap-item reveal">
+          <div class="roadmap-dot" aria-hidden="true"></div>
+          <p class="roadmap-date">2028.01</p>
+          <h3 data-i18n="roadmap.m4.title">CES 全球发布</h3>
+          <p data-i18n="roadmap.m4.desc">目标：斩获五大创新奖提名与奖项。</p>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-name">AGENTA&nbsp;2028</span>
+        <p data-i18n="footer.tag">面向 CES 2028 的前沿技术展示站</p>
+      </div>
+      <div class="footer-ack">
+        <h3 data-i18n="footer.ack">开源致谢</h3>
+        <ul class="footer-links">
+          <li><a href="https://github.com/bytedance/deer-flow" target="_blank" rel="noopener noreferrer">DeerFlow</a></li>
+          <li><a href="https://github.com/OpenHands/OpenHands" target="_blank" rel="noopener noreferrer">OpenHands</a></li>
+          <li><a href="https://github.com/langchain-ai/langgraph" target="_blank" rel="noopener noreferrer">LangGraph</a></li>
+          <li><a href="https://github.com/crewAIInc/crewAI" target="_blank" rel="noopener noreferrer">CrewAI</a></li>
+          <li><a href="https://github.com/microsoft/autogen" target="_blank" rel="noopener noreferrer">AutoGen</a></li>
+          <li><a href="https://github.com/FoundationAgents/MetaGPT" target="_blank" rel="noopener noreferrer">MetaGPT</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p data-i18n="footer.disclaimer">本页面为概念展示站。演示内容为前端模拟；「CES 2028 发布」与「五大创新奖」为公开目标，并非既成事实。所有开源项目名称与链接归其各自作者所有。</p>
+      <p class="footer-rights">© 2026 AGENTA 2028. <span data-i18n="footer.rights">保留所有权利。</span></p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/demo.js"></script>
+</body>
+</html>
